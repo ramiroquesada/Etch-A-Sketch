@@ -5,6 +5,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 64px;
 }
 
 *{
@@ -27,12 +29,16 @@ body{
     align-items: center;
     justify-content: center;
     display: flex;
+    border: 1px solid black;
 }
 
-/*.gridElement:hover{
-    background-color: black;
-}*/
-
 .painted{
-    background-color: red;
+    background-color: black;
+}
+
+.gridSelector{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

@@ -1,8 +1,11 @@
 let grid = document.getElementById('grid-container');
 
+
+let selector = document.getElementById('myRange');
+
 let mouseDown = false;
-document.body.onmousedown = () => (mouseDown = true)
-document.body.onmouseup = () => (mouseDown = false)
+document.body.onmousedown = () => mouseDown = true;
+document.body.onmouseup = () => mouseDown = false;
 
 
 for (i=1; i<=256; i++){
@@ -12,7 +15,7 @@ for (i=1; i<=256; i++){
 
     gridElement.classList.add('gridElement')
 
-    gridElement.innerHTML= i;
+    //gridElement.innerHTML= i;
 
     gridElement.addEventListener('mouseover', changeColor);
     gridElement.addEventListener('mousedown', changeColor);
@@ -31,4 +34,6 @@ function changeColor(e){
     }
 
 }
+
+
 

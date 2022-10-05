@@ -9,8 +9,20 @@
 </head>
 <body oncontextmenu="return false;">
     
+    <div class="gridSelector">
+        <p class="rangeValueNumber">
+            16
+        </p>
 
+        <input type="range" min="2" max="128" value="16" step="2" class="slider" id="myRange" oninput="this.previousElementSibling.innerHTML = this.value">
+        
+    </div>
+    
     <div class="grid" id="grid-container"></div>
+
+    <div class="eraseButton">
+        <button type="button" class="eraseButton">Erase All</button>
+    </div>
 
     
     <script src="script.js"></script>
