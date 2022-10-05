@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    user-select:none;
+}
+
+.grid{
+    width: 600px;
+    height: 600px;
+    border: 2px solid;
+    border-color: black;
+    display: grid;
+    
+    grid-template-columns: repeat(16,auto)
+
+
+}
+
+.gridElement{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/*.gridElement:hover{
+    background-color: black;
+}*/
+
+.painted{
+    background-color: red;
+}
