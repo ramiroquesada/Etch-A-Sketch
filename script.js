@@ -8,6 +8,8 @@ document.body.onmousedown = () => mouseDown = true;
 document.body.onmouseup = () => mouseDown = false;
 
 
+const fillGrid = function(){
+
 for (i=1; i<=256; i++){
     
     let gridElement = document.createElement('div');
@@ -21,9 +23,10 @@ for (i=1; i<=256; i++){
     gridElement.addEventListener('mousedown', changeColor);
 
   
+    }
 }
 
-function changeColor(e){
+const changeColor = function (e){
     console.log(e)
     if (e.type === 'mouseover' && !mouseDown) return
     else if(e.which===1){
@@ -36,4 +39,5 @@ function changeColor(e){
 }
 
 
+fillGrid();
 
