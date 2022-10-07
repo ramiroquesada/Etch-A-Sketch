@@ -108,3 +108,21 @@ body {
   margin-left: 90px;
   opacity: 0;
 }
+
+.credits {
+  display: flex;
+  color: black !important;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: black !important;
+}
+
+.fa-github {
+  margin-left: 8px;
+}
