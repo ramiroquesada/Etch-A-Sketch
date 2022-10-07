@@ -1,30 +1,52 @@
 <!DOCTYPE html>
 <html lang="es, en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Etch-A-Sketch</title>
-</head>
-<body oncontextmenu="return false;">
-    
-    <div class="gridSelector">
-        <p class="rangeValueNumber">
-            16
-        </p>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="leftContainer">
+      <p class="settingsText">Change Color</p>
+      <input id="color-picker" type="color" />
 
-        <input type="range" min="2" max="128" value="16" step="2" class="slider" id="myRange" oninput="this.previousElementSibling.innerHTML = this.value">
-        
+      <p class="rainbowMode" id="rainbowMode">Rainbow Mode</p>
+      <input id="rainbow" type="checkbox" />
+      <div class="gridSelector">
+        <p class="rangeValueNumber" id="rangeValueNumber">Square: 16 x 16</p>
+
+        <input
+          type="range"
+          min="2"
+          max="64"
+          value="16"
+          step="2"
+          class="slider"
+          id="myRange"
+        />
+      </div>
+      <div class="botonBorrar">
+        <button type="button" id="eraseButton" class="eraseBtn">Erase</button>
+      </div>
     </div>
-    
-    <div class="grid" id="grid-container"></div>
 
-    <div class="eraseButton">
-        <button type="button" class="eraseButton">Erase All</button>
+    <div class="midContainer" oncontextmenu="return false;">
+      <div class="mainText">Etch-A-Sketch</div>
+      <div class="grid" id="grid-container"></div>
     </div>
 
-    
+    <div class="rightContainer">
+      <p class="settingsText hidden">Change Color</p>
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
+<!-- oninput="this.previousElementSibling.innerHTML = this.value" -->
