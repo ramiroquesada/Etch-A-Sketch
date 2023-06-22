@@ -15,6 +15,8 @@ let colorWhite = "#ffffff";
 
 let currentMode = "color";
 
+let btnImprimir = document.getElementById('imprimir')
+
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
 document.body.onmouseup = () => (mouseDown = false);
@@ -78,15 +80,15 @@ const fillGrid = () => {
 const changeColor = (e) => {
   if (e.type === "mouseover" && !mouseDown) return;
   else if (e.which === 1 && currentMode === "color") {
-    e.path[0].style.backgroundColor = currentColor;
+    e.target.style.backgroundColor = currentColor;
   } else if (e.which === 1 && currentMode === "rainbow") {
     const randomR = Math.floor(Math.random() * 256);
     const randomG = Math.floor(Math.random() * 256);
     const randomB = Math.floor(Math.random() * 256);
 
-    e.path[0].style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
+    e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`;
   } else if (e.which === 3) {
-    e.path[0].style.backgroundColor = "#ffffff";
+    e.target.style.backgroundColor = "#ffffff";
   }
 };
 
@@ -99,6 +101,8 @@ const eraseAll = () => {
 };
 
 eraseButton.addEventListener("click", eraseAll);
+
+
 
 // EJECUTA EL PROGRAMA
 
